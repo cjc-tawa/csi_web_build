@@ -1,0 +1,191 @@
+/* ---------------------------------------------------------------
+	body
+ -------------------------------------------------------------- */
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+        background-color:#69B578;
+        padding: 0;
+        margin: 0;
+}
+
+
+
+/* ---------------------------------------------------------------
+	Wrapper.
+ -------------------------------------------------------------- */
+
+#wrapper{
+        position: absolute;
+	top:-15px;
+	left:0;
+	width:100%;
+	
+}
+/* ---------------------------------------------------------------
+	Navigation.
+ -------------------------------------------------------------- */
+#bold{
+        position:fixed;
+        top:-4px;
+        
+        
+}
+
+#links{
+        position:relative
+        width:100%;
+
+}
+
+#navbar {
+	width: 100%;
+        position: fixed;
+        top:-10%;
+        z-index:10;
+        background-color: #3A7D44;
+        height:180px;
+}
+
+#navbar ul {
+	text-align: center;
+	margin: 0px;
+	margin-left: 25%;
+        margin-top:0px;
+	padding: 0;
+        top:20px;
+        position:fixed;
+      
+}
+ 
+#navbar li {
+	display: inline;
+	list-style-type: none;
+	float: left;
+	padding: 5px;
+	margin: 0 10px 0 10px;
+	text-align: center;
+	border: 2px solid #eee;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	width: 200px;
+	box-sizing: border-box;
+        background-color: #999;
+}
+
+
+#navbar a:link,
+#navbar a:active,
+#navbar a:visited {
+	font-family: 'Montserrat', sans-serif;
+	/*font-weight: 800;*/
+	font-size: 1.7em;
+	text-decoration: none;
+}
+
+#navbar a:link {
+	color: #fff;
+}
+
+#navbar a:active {
+	color: #fff;
+}
+
+#navbar a:visited {
+	color: #fff;
+}
+
+/* ---------------------------------------------------------------
+	Query stuff.
+ -------------------------------------------------------------- */
+
+ #main{
+        position:relative;
+        top:150px;
+        left:2%;
+        width:95%;
+}
+
+
+/*headings 2 works with data being put into querybox */
+
+.headings2 {
+	width: 100%;
+	display: grid;
+	grid-gap: 5%;
+	padding-left: 0%;
+	margin-top: 1%;
+	grid-template-columns: 40% 50%;
+	grid-template-rows:10%;   
+        box-shadow:0 2px 2px #808080;
+}
+
+.headings2 div {
+	padding-left: 10px;
+        
+}
+
+.headings2 p {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.0em;
+	color: #000;
+	margin: 5px 0 0 0;
+}
+.headings2 img{
+        box-shadow:0 2px 2px #808080
+}
+
+
+.right {
+	text-align: right;
+	padding-right: 10px;
+}
+
+
+
+/*querybox holds query data that is displayed*/
+#querybox{
+        top:0px;
+        left:0px;
+        width:100%;
+        height:5000px;
+        border: 2px solid black;
+        position:relative;
+        background-color:white;
+        opacity:1;
+        display: inline-grid;
+        grid-template-columns: 29% 29% 29%;
+        grid-column-gap: 5%;
+        grid-row-gap: 1%;
+        padding: 1%;
+}
+
+
+/* ---------------------------------------------------------------
+	fonts
+ -------------------------------------------------------------- */ 
+
+h1 {
+	font-size: 3.0em;
+	color: #fff;
+	margin: 15px 0 0 20px;
+        text-shadow: 2px 2px #000;
+} 
+
+h2 {
+	font-size: 1.4em;
+	color: #555;
+	margin: 0;
+}
+h3{
+        font-size:0.8em;
+        font-weight:lighter;
+        padding-right: 20px;
+        overflow:auto;
+        height:125px;
+}
+
+
