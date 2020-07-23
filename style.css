@@ -35,7 +35,7 @@ body {
 }
 
 #links{
-        position:relative
+        position:relative;
         width:100%;
 
 }
@@ -45,7 +45,7 @@ body {
         position: fixed;
         top:-10%;
         z-index:10;
-        background-color: #3A7D44;
+        background-color: #858f87;
         height:180px;
 }
 
@@ -63,7 +63,6 @@ body {
 #navbar li {
 	display: inline;
 	list-style-type: none;
-	float: left;
 	padding: 5px;
 	margin: 0 10px 0 10px;
 	text-align: center;
@@ -71,7 +70,6 @@ body {
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
 	border-radius: 6px;
-	width: 200px;
 	box-sizing: border-box;
         background-color: #999;
 }
@@ -108,10 +106,16 @@ body {
         left:2%;
         width:95%;
 }
-
-
+.querybox{
+	width:100%;
+	white-space:nowrap;
+}
+#query_items{
+	
+	display: inline-block
+}
 /*headings 2 works with data being put into querybox */
-
+/*
 .headings2 {
 	width: 100%;
 	display: grid;
@@ -145,8 +149,9 @@ body {
 }
 
 
-
+*/
 /*querybox holds query data that is displayed*/
+/*
 #querybox{
         top:0px;
         left:0px;
