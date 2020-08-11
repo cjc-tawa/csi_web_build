@@ -1,11 +1,5 @@
 <!-- NOTES: 
 	- Link to paste in browser: localhost/teacher/connect.php
-		
-	Database:
-	- Server name: 3086896_cchristensen
-	- Database name: 3086896_cchristensen
-	- User name: 3086896_cchristensen
-	- Password: dojustly01
 -->
 
 <?php

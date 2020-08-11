@@ -110,63 +110,7 @@ body {
 	width:100%;
 	white-space:nowrap;
 }
-#query_items{
-	
-	display: inline-block
-}
-/*headings 2 works with data being put into querybox */
-/*
-.headings2 {
-	width: 100%;
-	display: grid;
-	grid-gap: 5%;
-	padding-left: 0%;
-	margin-top: 1%;
-	grid-template-columns: 40% 50%;
-	grid-template-rows:10%;   
-        box-shadow:0 2px 2px #808080;
-}
 
-.headings2 div {
-	padding-left: 10px;
-        
-}
-
-.headings2 p {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 1.0em;
-	color: #000;
-	margin: 5px 0 0 0;
-}
-.headings2 img{
-        box-shadow:0 2px 2px #808080
-}
-
-
-.right {
-	text-align: right;
-	padding-right: 10px;
-}
-
-
-*/
-/*querybox holds query data that is displayed*/
-/*
-#querybox{
-        top:0px;
-        left:0px;
-        width:100%;
-        height:5000px;
-        border: 2px solid black;
-        position:relative;
-        background-color:white;
-        opacity:1;
-        display: inline-grid;
-        grid-template-columns: 29% 29% 29%;
-        grid-column-gap: 5%;
-        grid-row-gap: 1%;
-        padding: 1%;
-}
 
 
 /* ---------------------------------------------------------------

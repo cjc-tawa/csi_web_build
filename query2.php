@@ -29,8 +29,7 @@
                                 <ul>
                                     <li><a href="index.php">Home</a></li>
                                     <li><a href="query2.php">Category</a></li>
-                                    <li><a href="query3.php">Clothing</a></li>
-                                    <li><a href="query4.php">Not Clothing</a></li>
+                                    
                                 </ul>
                         </nav>
                 </nav>
@@ -38,12 +37,14 @@
 					
 					<div id='querybox'>
 					<?php 
-						$query = ("SELECT m.id, pn.prodName, pn.description, m.cost,c.category,pi.productImageLocation,pn.description
-                                                        FROM main AS m 
-                                                        INNER JOIN prodName AS pn ON m.prodNameFK = pn.prodNamePK
-                                                        INNER JOIN catDes AS c ON m.categoryFK = c.category_PK
-                                                        INNER JOIN prodImage AS pi ON m.prodFileNameFK = pi.prodImagePK
-                                                        ORDER BY c.category, m.cost ASC  ");
+						$query = ("SELECT s.title, a.album, art.artist, g.genre, s.duration, s.size
+                                                FROM songs as s
+                                                JOIN albums as a ON s.album_id = a.album_id
+                                                JOIN artists as art ON s.artist_id = art.artist_id
+                                                JOIN album_to_genre a2g ON a.album_id = a2g.album_id
+                                                JOIN genres g ON a2g.genre_id = g.genre_id
+                                                WHERE 1
+                                                ORDER BY g.genre ASC, art.artist ASC");
 								
 						$result = mysqli_query($con, $query);
 					
