@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!doctype html>
 <html lang="en-NZ">
 <head> 
@@ -28,9 +32,15 @@
         <div id="bold"><h1>Music Database</h1></div>
                 <nav id='links'>
                         <ul>
-                                <li><a href="index.php">Albums</a></li>
+                                <li><a href="query1.php">Albums</a></li>
                                 <li><a href="query2.php">Artists</a></li>
-                                
+                                <?php
+                                if (isset($_SESSION["admin_logged_in"])) {
+                                ?>
+                                <li><a href="#">Admin</a></li>
+                                <?php
+                                }
+                                ?>
                         </ul>
                 </nav>
         </nav>
