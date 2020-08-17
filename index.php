@@ -28,7 +28,7 @@
         $_SESSION["user_logged_in"] = true;
 
         // Special case
-        if ($username_attempt == "Graeme") {
+        if ($username_attempt == "graeme") {
             $_SESSION["admin_logged_in"] = true;
         }
 
@@ -57,6 +57,19 @@
 
     <button type="submit">Login</button>
   </div>
+</form>
+<form action="index.php" method="get">
+<?php
+    if($_SERVER['REQUEST_METHOD'] == "GET" and isset($_POST['someAction']))
+    {
+        func();
+    }
+    function func()
+    {
+      session_destroy();     
+    }
+?>
+  <input type="submit" name="someAction" value="GO" />
 </form>
 </body>
 </html>

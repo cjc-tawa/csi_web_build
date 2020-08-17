@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (isset($_SESSION["user_logged_in"])) {
+}
+else{
+        header("Location: http://localhost/CSI_WEB_BUILD/index.php");
+}
 ?>
 
 <!doctype html>
@@ -45,6 +50,10 @@ session_start();
                 </nav>
         </nav>
         <div id='main'>
+        <?php
+        echo $_SESSION['user_logged_in'];
+        echo $_SESSION['admin_logged_in'];
+        ?>
                                 <div id='querybox'>
                                 <table>
                                 <tr>

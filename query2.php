@@ -24,43 +24,67 @@
                 require_once("connect.php");
                 ?>
                 <nav id="navbar">
-                <div id="bold"><center><h1>Kool-Kiwiana</h1></center></div>
-                        <nav id='links'>
-                                <ul>
-                                    <li><a href="index.php">Home</a></li>
-                                    <li><a href="query2.php">Category</a></li>
-                                    
-                                </ul>
-                        </nav>
+                <div id="bold"><h1>Music Database</h1></div>
+                <nav id='links'>
+                        <ul>
+                                <li><a href="query1.php">Albums</a></li>
+                                <li><a href="query2.php">Artists</a></li>
+                                <?php
+                                if (isset($_SESSION["admin_logged_in"])) {
+                                ?>
+                                <li><a href="#">Admin</a></li>
+                                <?php
+                                }
+                                ?>
+                        </ul>
+                </nav>
                 </nav>
                 <div id='main'>
 					
 					<div id='querybox'>
-					<?php 
-						$query = ("SELECT s.title, a.album, art.artist, g.genre, s.duration, s.size
-                                                FROM songs as s
-                                                JOIN albums as a ON s.album_id = a.album_id
-                                                JOIN artists as art ON s.artist_id = art.artist_id
-                                                JOIN album_to_genre a2g ON a.album_id = a2g.album_id
-                                                JOIN genres g ON a2g.genre_id = g.genre_id
-                                                WHERE 1
-                                                ORDER BY g.genre ASC, art.artist ASC");
-								
-						$result = mysqli_query($con, $query);
-					
-
-                                                while($output=mysqli_fetch_array($result))
-                                                                {
-                                                        ?>
+					<table>
+                                <tr>
+                                        <th>title</th>
+                                        <th>album</th>
+                                        <th>artist</th>
+                                        <th>genre</th>
+                                        <th>duration</th>
+                                        <th>size</th>
+                                </tr>
+                                <?php 
+                                        $query = ("SELECT s.title, a.album, art.artist, g.genre, s.duration, s.size
+                                        FROM songs as s
+                                        JOIN albums as a ON s.album_id = a.album_id
+                                        JOIN artists as art ON s.artist_id = art.artist_id
+                                        JOIN album_to_genre a2g ON a.album_id = a2g.album_id
+                                        JOIN genres g ON a2g.genre_id = g.genre_id
+                                        WHERE 1
+                                        ORDER BY g.genre ASC, art.artist ASC");
                                                         
-                                                        <div class="headings2">
-                                                                <div><p><img src="<?php echo $output['productImageLocation']; ?>" alt="Error" width="150" height="150"></p></div>
-                                                                <div><p><?php echo $output['prodName'];?><br>$<?php echo $output['cost']; ?><br><?php echo $output['category']; ?><h3><?php echo $output['description']; ?></h3></p></div>
-                                                                
-                                                        </div>
-                                                        <?php
-                                                        } 
-                                                        ?>
+                                        $result = mysqli_query($con, $query);
+                                                        
+                                        while($output=mysqli_fetch_array($result))
+                                        {
+                                ?>
+                                
+                                        
+                                                
+                                        <tr>
+                                                <td><?php echo $output['title']; ?></td>
+                                                <td><?php echo $output['album'];?></td>
+                                                <td><?php echo $output['artist']; ?></td>
+                                                <td><?php echo $output['genre']; ?></td>
+                                                <td><?php echo $output['duration']; ?></td>
+                                                <td><?php echo $output['size']; ?></td>
+                                                
+                                        <tr>
+
+                                        
+                                                
+                                        
+                                        <?php
+                                        } 
+                                  ?>
                                                 </div>
                                         </div>
 				</div>
