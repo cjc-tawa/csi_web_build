@@ -60,16 +60,15 @@
 </form>
 <form action="index.php" method="get">
 <?php
-    if($_SERVER['REQUEST_METHOD'] == "GET" and isset($_POST['someAction']))
+    if($_SERVER['REQUEST_METHOD'] == "GET" and isset($_GET['someAction']))
     {
         func();
     }
-    function func()
-    {
+    function func() {
       session_destroy();     
     }
 ?>
-  <input type="submit" name="someAction" value="GO" />
-</form>
+  <input type="submit" name="someAction" value="Clear Session"/>
+</form> 
 </body>
 </html>

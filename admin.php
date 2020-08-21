@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION["user_logged_in"])) {
+if ((isset($_SESSION["user_logged_in"])) and $_SESSION["admin_logged_in"] == true) {
 }
 else{
         header("Location: http://localhost/CSI_WEB_BUILD/index.php");
@@ -42,7 +42,7 @@ else{
                                 <?php
                                 if (isset($_SESSION["admin_logged_in"])) {
                                 ?>
-                                <li><a href="admin.php">Admin</a></li>
+                                <li><a href="#">Admin</a></li>
                                 <?php
                                 }
                                 ?>
