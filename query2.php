@@ -29,6 +29,7 @@
                         <ul>
                                 <li><a href="query1.php">Albums</a></li>
                                 <li><a href="query2.php">Artists</a></li>
+                                <li><a href="logout.php">Log Out</a></li>
                                 <?php
                                 if (isset($_SESSION["admin_logged_in"])) {
                                 ?>
@@ -41,7 +42,7 @@
                 </nav>
                 <div id='main'>
 					
-					<div id='querybox'>
+				<div id='querybox'>
 					<table>
                                 <tr>
                                         <th>title</th>
@@ -85,10 +86,11 @@
                                         <?php
                                         } 
                                   ?>
-                                                </div>
-                                        </div>
+                                </table>         
+                                        
 				</div>
-      
+                                <div class="totaltime">Total duration: 13 hours 29 minutes 36 seconds</div>
+                                        
                 </div>
         </body>
 </html>
