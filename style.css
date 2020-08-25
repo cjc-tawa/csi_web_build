@@ -107,8 +107,13 @@ body {
         width:95%;
 }
 .querybox{
-	width:100%;
+	position: relative;
+	width:80%;
 	white-space:nowrap;
+}
+.totaltime{
+	position: relative;
+	top:0%;
 }
 
 

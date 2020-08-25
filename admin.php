@@ -30,7 +30,7 @@ else{
 <body>
 <div id="wrapper">
         <?php
-        require_once("connect.php");
+        require_once("connectUser.php");
         ?>
         
         <nav id="navbar">
@@ -39,6 +39,7 @@ else{
                         <ul>
                                 <li><a href="query1.php">Albums</a></li>
                                 <li><a href="query2.php">Artists</a></li>
+                                <li><a href="logout.php">Log Out</a></li>
                                 <?php
                                 if (isset($_SESSION["admin_logged_in"])) {
                                 ?>
@@ -57,12 +58,9 @@ else{
                                 <div id='querybox'>
                                 <table>
                                 <tr>
-                                        <th>title</th>
-                                        <th>album</th>
-                                        <th>artist</th>
-                                        <th>genre</th>
-                                        <th>duration</th>
-                                        <th>size</th>
+                                        <th>UserID</th>
+                                        <th>Username</th>
+                                        <th>Password</th>
                                 </tr>
                                 <?php 
                                         $query = ("SELECT s.title, a.album, art.artist, g.genre, s.duration, s.size

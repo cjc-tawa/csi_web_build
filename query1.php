@@ -1,6 +1,12 @@
 <?php
 session_start();
 if (isset($_SESSION["user_logged_in"])) {
+        if ($_SESSION["user_logged_in"]==false){
+                header("Location: http://localhost/CSI_WEB_BUILD/index.php");
+        }
+        else{
+                echo($_SESSION["user_logged_in"]);
+        }
 }
 else{
         header("Location: http://localhost/CSI_WEB_BUILD/index.php");
@@ -39,6 +45,7 @@ else{
                         <ul>
                                 <li><a href="query1.php">Albums</a></li>
                                 <li><a href="query2.php">Artists</a></li>
+                                <li><a href="logout.php">Log Out</a></li>
                                 <?php
                                 if (isset($_SESSION["admin_logged_in"])) {
                                 ?>
@@ -54,7 +61,7 @@ else{
         echo $_SESSION['user_logged_in'];
         echo $_SESSION['admin_logged_in'];
         ?>
-                                <div id='querybox'>
+                        <div class='querybox'>
                                 <table>
                                 <tr>
                                         <th>title</th>
@@ -97,10 +104,15 @@ else{
                                         
                                         <?php
                                         } 
-                                  ?>
-                                </div>
-        </div>
+                                ?>
+                                </table>
+                        </div>
+                        
+                                
+        <div class="totaltime">Total duration: 13 hours 29 minutes 36 seconds</div>
+        
 
 </div>
+
 </body>
 </html>
