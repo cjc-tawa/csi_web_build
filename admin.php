@@ -65,10 +65,10 @@ else{
                     </td>
                     <td> 
                         <a href="
-                            <?php echo "delete_user.php?user_id=" . $row["userID"]?>
+                            <?php echo "delete_user.php?user_id=" . $row["userID"]; ?>
                         ">delete</a>
                         <a href="
-                            <?php echo "new_password.php?user_id=" . $row["userID"] ?>
+                            <?php echo "new_password.php?user_id=" . $row["userID"]; ?>
                         ">update</a>
                     </td>
                 </tr>
@@ -78,7 +78,7 @@ else{
                 ?>
             </table>
             <div id="extra-information">
-                <a href="new_user.php">add user</a>
+                
             </div>
         </div>
     </div>

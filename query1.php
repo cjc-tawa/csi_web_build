@@ -5,7 +5,7 @@ if (isset($_SESSION["user_logged_in"])) {
                 header("Location: http://localhost/CSI_WEB_BUILD/index.php");
         }
         else{
-                echo($_SESSION["user_logged_in"]);
+                
         }
 }
 else{
@@ -57,10 +57,6 @@ else{
                 </nav>
         </nav>
         <div id='main'>
-        <?php
-        echo $_SESSION['user_logged_in'];
-        echo $_SESSION['admin_logged_in'];
-        ?>
                         <div class='querybox'>
                                 <table>
                                 <tr>
