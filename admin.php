@@ -15,11 +15,11 @@ else{
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Cardboard Cutout Design</title>
+    <title>Music Database</title>
 </head>
 <body>
     <div id="wrapper">
-        <!--<nav id="navbar">
+        <nav id="navbar">
         <div id="bold"><h1>Music Database</h1></div>
                 <nav id='links'>
                         <ul>
@@ -35,8 +35,8 @@ else{
                                 ?>
                         </ul>
                 </nav>
-        </nav>-->
-        <div id="body">
+        </nav>
+        <div id="main">
             <table id="info-table">
                 <tr>
                     <th>Users</th>
@@ -65,10 +65,10 @@ else{
                     </td>
                     <td> 
                         <a href="
-                            <?php echo "delete_user.php?user_id=" . $row["user_id"]?>
+                            <?php echo "delete_user.php?user_id=" . $row["userID"]?>
                         ">delete</a>
                         <a href="
-                            <?php echo "new_password.php?user_id=" . $row["user_id"] ?>
+                            <?php echo "new_password.php?user_id=" . $row["userID"] ?>
                         ">update</a>
                     </td>
                 </tr>

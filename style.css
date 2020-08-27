@@ -28,25 +28,26 @@ body {
 	Navigation.
  -------------------------------------------------------------- */
 #bold{
-        position:fixed;
-        top:-4px;
+        position: relative;
+        width:50%;
         
         
 }
 
+
 #links{
         position:relative;
-        width:100%;
+		width:80%;
+		float:right;
+		padding:10%;
 
 }
 
 #navbar {
 	width: 100%;
-        position: fixed;
-        top:-10%;
-        z-index:10;
-        background-color: #858f87;
-        height:180px;
+	position: fixed;
+    background-color: #858f87;
+    height:10vh;
 }
 
 #navbar ul {

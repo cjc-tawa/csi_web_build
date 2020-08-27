@@ -19,13 +19,13 @@ else{
 	<!-- NOTES: 
 		- Link to paste in browser: localhost/CSI_WEB_BUILD/index.php
 	-->
-	<title>PHP Build</title>
+	
 	<meta charset="utf-8">
 	<meta name="author" content="Corey J Christensen">
 	<meta name="description" content="Building a website using HTML, CSS, and PHP.">
 	<meta name="keywords" content="HTML, CSS, PHP, XAMPP, MySQL, website build, databases">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+	<title>Music Database</title>
 	<!-- Fonts imported using Google Fonts. -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">

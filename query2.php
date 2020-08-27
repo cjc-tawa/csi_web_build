@@ -4,7 +4,7 @@
 	<!-- NOTES: 
 		- Link to paste in browser: localhost/teacher/index.php
 	-->
-	<title>PHP Build</title>
+	<title>Music Database</title>
 	<meta charset="utf-8">
 	<meta name="author" content="Corey J Christensen">
 	<meta name="description" content="Building a website using HTML, CSS, and PHP.">
