@@ -19,7 +19,7 @@ body {
 
 #wrapper{
         position: absolute;
-	top:-15px;
+	
 	left:0;
 	width:100%;
 	
@@ -28,35 +28,37 @@ body {
 	Navigation.
  -------------------------------------------------------------- */
 #bold{
-        position:fixed;
-        top:-4px;
+        position: absolute;
+        width:40%;
         
         
 }
 
+
 #links{
-        position:relative;
-        width:100%;
+        position: absolute;
+		width:60%;
+		float:right;
+		padding:10%;
 
 }
 
 #navbar {
 	width: 100%;
-        position: fixed;
-        top:-10%;
-        z-index:10;
-        background-color: #858f87;
-        height:180px;
+	position: absolute;
+    background-color: #858f87;
+    height:15vh;
 }
 
 #navbar ul {
 	text-align: center;
 	margin: 0px;
-	margin-left: 25%;
+	left:50%;
         margin-top:0px;
 	padding: 0;
         top:20px;
-        position:fixed;
+		position: absolute;
+	width:90%;
       
 }
  

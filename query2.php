@@ -1,10 +1,29 @@
+<?php
+session_start();
+if (isset($_SESSION["user_logged_in"])) {
+        if ($_SESSION["user_logged_in"]==false){
+                header("Location: http://localhost/CSI_WEB_BUILD/index.php");
+        }
+        else{
+                
+        }
+}
+else{
+        header("Location: http://localhost/CSI_WEB_BUILD/index.php");
+}
+?>
+
+
+
+
+
 <!doctype html>
 <html lang="en-NZ">
 <head>
 	<!-- NOTES: 
 		- Link to paste in browser: localhost/teacher/index.php
 	-->
-	<title>PHP Build</title>
+	<title>Music Database</title>
 	<meta charset="utf-8">
 	<meta name="author" content="Corey J Christensen">
 	<meta name="description" content="Building a website using HTML, CSS, and PHP.">
@@ -26,14 +45,14 @@
                 <nav id="navbar">
                 <div id="bold"><h1>Music Database</h1></div>
                 <nav id='links'>
-                        <ul>
+                <ul>
                                 <li><a href="query1.php">Albums</a></li>
                                 <li><a href="query2.php">Artists</a></li>
                                 <li><a href="logout.php">Log Out</a></li>
                                 <?php
                                 if (isset($_SESSION["admin_logged_in"])) {
                                 ?>
-                                <li><a href="#">Admin</a></li>
+                                <li><a href="admin.php">Admin</a></li>
                                 <?php
                                 }
                                 ?>
