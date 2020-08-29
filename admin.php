@@ -43,7 +43,7 @@ else{
                     <th>Password</th>
                     <th>Actions</th>
                 </tr>
-                <?php 
+                <?php
                     // Building the query
                     $query = "
                         SELECT userID, userName, hash
@@ -63,7 +63,7 @@ else{
                     <td>
                         <?php echo $row["hash"];?>
                     </td>
-                    <td> 
+                    <td>
                         <a href="
                             <?php echo "delete_user.php?user_id=" . $row["userID"]; ?>
                         ">delete</a>
